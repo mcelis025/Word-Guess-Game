@@ -73,3 +73,26 @@ document.onkeyup = function (event) {                                           
 function checkLetters(userInput, random) {                                        // This function grabs userInput and random 
   return random.indexOf(userInput);                                               // Checks to see if userInput is in random - if false then it returns -1 if true then  > -1
 }
+
+function gameOver() {
+}
+
+// Reset function
+function resetGame() {
+  currentWord.innerHTML = "";
+  guessesLeft = 5;                     
+  letterGuessed.textContent = "";   
+  random = myWords[Math.floor(Math.random() * myWords.length)];
+
+  wordLength = random.length;
+  console.log(random);
+  for (var i = 0; i < random.length; i++) {                                       // Runs loop as long as var length
+    var newSpan = document.createElement("span");                                 // Created var newSpan which hold a string
+    newSpan.textContent = " _ ";                                                  // The string is replaced with " _ "
+    newSpan.setAttribute("id", "underscore_" + i);                                // Sets id and userscore equal to the letters in the random word
+    currentWord.appendChild(newSpan);                                             // Adds contents of newSpan to correct letter --> correctLetter then targets correct-letter and is displayed in html
+  }
+  image = document.getElementById("picture");                                     // Add placeholder img
+  image = src="assets/images/placeholder.jpg";
+  return random;
+}

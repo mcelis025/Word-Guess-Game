@@ -9,45 +9,52 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/style.css">
-  <script src="assets/javascript/game.js"></script>
+  
 </head>
 <body>
+  
   <div class="container-fluid">
     <div class="row">
         <div class="col-md-12 text-center">
-            <p id="title">Hangman</p>
+            <p id="title">HANGMAN</p>
         </div>
     </div>
   </div>
   <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <img id="dragonball" src="assets/images/dragonballlogo.png" alt="dragonball" class="img-fluid mx-auto d-block mb-5">
+            <img id="dragonball" src="assets/images/dragonballlogo.jpg" alt="dragonball" class="img-fluid mx-auto d-block mb-3">
         </div>
     </div>
   </div>
-  <div class="container-fluid ">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-md-2"></div>
-      <div class="col-md-8 border border-secondary bg-light">
+      <div id="main" class="col-md-8 border border-secondary bg-light pt-3 mb-5">
         <div class="row">
           <div class="col-md-12 text-center">
-            <p class="lead">PRESS ANY KEY TO GET STARTED!</p>
+                  <p class="lead mb-5">PRESS ANY KEY TO GET STARTED!</p> 
           </div>
         </div>
         <div class="row">
           <div class="col-md-8">
-
+            <img id="picture" src="assets/images/placeholder.jpg" class="pb-4"/>
           </div>
           <div class="col-md-4">
-              
+            <p id="wins-text" class="lead pb-2">Wins: 0</p>
+            <p id="losses-text" class="lead pb-2">Losses: 0</p>
+            <p class="lead pb-2">Current Word:</p>
+            <p id="current-word" class="lead pb-2"></p>
+            <p id="guesses-left" class="lead pb-2">Wrong Guesses Left: 5</p>
+            <p id="letters-guessed" class="lead pb-3">Letters Guessed: </p>
           </div>
         </div>
       </div>
       <div class="col-md-2"></div>
     </div>
   </div>
-  
+
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </body>
 </html>

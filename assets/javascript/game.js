@@ -68,3 +68,8 @@ document.onkeyup = function (event) {                                           
   console.log(userInput);
   guessesRemaining.textContent = "Wrong Guesses Left: " + guessesLeft;            // Adds guessesLeft to guessesRemaing which then show to html
 }
+
+// function to check the letters
+function checkLetters(userInput, random) {                                        // This function grabs userInput and random 
+  return random.indexOf(userInput);                                               // Checks to see if userInput is in random - if false then it returns -1 if true then  > -1
+}

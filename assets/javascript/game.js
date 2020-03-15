@@ -40,3 +40,27 @@ document.onkeyup = function (event) {                                           
         wordLength--;                                                             // Decreases wordLength 
       }
     }
+
+
+    if(wordLength === 0){                                                         // If wordLength equals 0
+      wins++;                                                                     // Increases wins
+      image.src = "assets/images/" + random + ".jpg";                             // Switches img to random word character
+      winsText.textContent = "Wins: " + wins;                                     // Adds wins to winsText which then shows that to html file
+      random = resetGame();                                                       // Resets game
+    }
+    // we win the game
+  } else {
+    // lose an attempt or lose the game
+    // just lose an attempt, not the whole game
+    // no attempts left, so lose the whole game
+    if(guessesLeft > 0){                                                          // If guessesLeft is greater 0
+      guessesLeft--;                                                              // Decrease guessesLeft
+    } else {
+      losses++;                                                                   // Adds losses
+      // write the number of losses to the div
+      image.src = "assets/images/gameOver.jpg";                                   // Shows lose img
+      lossesText.textContent = "Losses: " + losses;                               // Adds losses to lossesText which then shows to to html 
+      random = resetGame();                                                       // Resets game
+      //gameOver();
+    }
+  }

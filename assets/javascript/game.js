@@ -64,3 +64,7 @@ document.onkeyup = function (event) {                                           
       //gameOver();
     }
   }
+  // loss logic
+  console.log(userInput);
+  guessesRemaining.textContent = "Wrong Guesses Left: " + guessesLeft;            // Adds guessesLeft to guessesRemaing which then show to html
+}

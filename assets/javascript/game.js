@@ -14,3 +14,10 @@ var image = document.getElementById("picture");
 
 var random = resetGame();                                                         // Random has the function to resetGame
 var wordLength = random.length;                                                   // Saves the number of letters in random - word
+
+// Start Game Event
+document.onkeyup = function (event) {                                             // Loop "turns on" on keyup
+  var userInput = event.key.toLowerCase();                                        // Makes userInput lowerCase and stores key inputs into userInput
+
+  var t = userInput + " ";                                                        // Adds userInput to 't' 
+  letterGuessed.innerHTML += t;                                                   // Takes whats in 't' and puts it in this displays everything typed

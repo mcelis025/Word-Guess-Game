@@ -21,3 +21,22 @@ document.onkeyup = function (event) {                                           
 
   var t = userInput + " ";                                                        // Adds userInput to 't' 
   letterGuessed.innerHTML += t;                                                   // Takes whats in 't' and puts it in this displays everything typed
+
+  // Wins/Gets a Letter Logic
+  if(random.indexOf(userInput) > -1){                                             // Checks if userInput letter is in the random work
+
+    var pos = 0;                                                                  // Sets pos to 0
+    var counterOccurance = -1;                                                    // Sets counterOccurance to -1
+
+    while(pos!= -1){                                                              // As long as the pos does not equal -1 run following 
+      pos = random.indexOf(userInput, counterOccurance + 1);                      // Checks when in the random word userInput letter us and adds 1 to search for multiples and makes that pos  
+      counterOccurance = pos;                                                     // makes counterOccurance equal to pos
+
+      console.log(pos);
+
+      if(pos != -1){                                                              // If pos does not equal -1 run following 
+        var replaceLetter = document.getElementById("underscore_" + pos);         // Takes _ and position of letter and makes a var to be able to replace
+        replaceLetter.textContent = userInput;                                    // Adds userInput to replaceLetter
+        wordLength--;                                                             // Decreases wordLength 
+      }
+    }

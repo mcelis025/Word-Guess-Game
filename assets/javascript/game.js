@@ -9,7 +9,15 @@ var randomPicked = [];
 
 //Array For Random Word
 var myWords = ["cell", "chiaotzu", "frieza", "gohan", "goku", "krillin", "buu", "piccolo", "tien", "trunks", "vegeta", "yamcha"];
-var replace = "";
+
+//getElementById 
+var winsText = document.getElementById("wins-text");
+var currentWord = document.getElementById("current-word");
+var guessesRemaining = document.getElementById("guesses-left");
+var letterGuessed = document.getElementById("letters-guessed");
+var lossesText = document.getElementById("losses-text");
+var image = document.getElementById("picture");
+
 
 
 

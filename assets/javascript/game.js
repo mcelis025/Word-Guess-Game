@@ -21,5 +21,15 @@ var image = document.getElementById("picture");
 //Random Word Generator  
 var random = myWords[Math.floor(Math.random() * myWords.length)];
 
+//Makes Random Word Into Underscores
+function addUnderscore() {
+  for (var i = 0; i < random.length; i++) {
+    randomPicked.push("_");
+  }
+  console.log(randomPicked);
+  currentWord.innerHTML = randomPicked.join(" ");
+}
+addUnderscore();
+
 
 

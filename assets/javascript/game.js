@@ -65,4 +65,13 @@ document.onkeyup = function (event) {                                           
         var tText = userInput + " ";
         letterGuessed.innerHTML += tText; 
         userLetter += userInput;
-
+      //check if the word includes that key
+      if (random.includes(userInput)) {
+        //do the rest of your work here
+        revealLetter();
+        if (!randomPicked.includes("_")) {
+          wins++;
+          image.src = "assets/images/" + random + ".jpg";   
+          winsText.textContent = "Wins: " + wins;
+          reset();
+        }

@@ -54,5 +54,10 @@ function reset() {
   addUnderscore();
 }
 
+// Start Game Event
+document.onkeyup = function (event) {                                             // Loop "turns on" on keyup
+  userInput = event.key.toLowerCase();                                        // Makes userInput lowerCase and stores key inputs into userInput
+  //check if the key is valid
+  if (alpha.includes(userInput)) {
 
 

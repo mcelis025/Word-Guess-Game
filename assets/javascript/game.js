@@ -18,6 +18,8 @@ var letterGuessed = document.getElementById("letters-guessed");
 var lossesText = document.getElementById("losses-text");
 var image = document.getElementById("picture");
 
+//Random Word Generator  
+var random = myWords[Math.floor(Math.random() * myWords.length)];
 
 
 

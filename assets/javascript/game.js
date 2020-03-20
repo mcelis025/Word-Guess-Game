@@ -59,5 +59,10 @@ document.onkeyup = function (event) {                                           
   userInput = event.key.toLowerCase();                                        // Makes userInput lowerCase and stores key inputs into userInput
   //check if the key is valid
   if (alpha.includes(userInput)) {
-
+    //check if the key was already pressed
+    if (!userLetter.includes(userInput)) { 
+      //add that key to userLetter
+        var tText = userInput + " ";
+        letterGuessed.innerHTML += tText; 
+        userLetter += userInput;
 

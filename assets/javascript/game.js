@@ -7,5 +7,9 @@ var userInput = "";
 var alpha = "abcdefghijklmnopqrstuvwxyz";
 var randomPicked = [];
 
+//Array For Random Word
+var myWords = ["cell", "chiaotzu", "frieza", "gohan", "goku", "krillin", "buu", "piccolo", "tien", "trunks", "vegeta", "yamcha"];
+var replace = "";
+
 
 

@@ -31,5 +31,28 @@ function addUnderscore() {
 }
 addUnderscore();
 
+//Switch underscore with userInput if in random - else guessesLeft--
+function revealLetter() {
+  for (var i = 0; i < random.length; i++) {
+    //check if current index value is equal to 
+    if (random[i] === userInput) {
+        randomPicked[i]=userInput;
+        console.log(randomPicked);
+      //update dom
+      currentWord.innerHTML = randomPicked.join(" ");
+    }
+  }
+}
+
+//Reset Function
+function reset() {
+  guessesLeft = 5;
+  userLetter = "";
+  randomPicked = [];
+  letterGuessed.textContent = "";   
+  random = myWords[Math.floor(Math.random() * myWords.length)];
+  addUnderscore();
+}
+
 
 
